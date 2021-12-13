@@ -308,8 +308,8 @@ const map = {
       change_colour:
         'this.player.colour = "#"+(Math.random()*0xFFFFFF<<0).toString(16);',
       /* you could load a new map variable here */
-      next_level: 'alert("Yay! You won! Reloading map.");this.load_map(this.initial_map);this.set_player(this.initial_map);',
-      death: 'alert("You died!");this.load_map(this.initial_map);this.set_player(this.initial_map);',
+      next_level: 'alert("Yay! You won! Reloading map.");this.load_map(this.initial_map);this.set_initial_state(this.initial_map);',
+      death: 'alert("You died!");this.load_map(this.initial_map);this.set_initial_state(this.initial_map);',
       unlock:
         'this.current_map.keys[10].solid = 0;this.current_map.keys[10].colour = "#888";',
     },

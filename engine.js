@@ -149,15 +149,12 @@ map.keys.forEach(function (key) {
 
 this.current_map.width_p = this.current_map.width * this.tile_size;
 this.current_map.height_p = this.current_map.height * this.tile_size;
-
-
-
 this.log("Successfully loaded map data.");
 
 return true;
 };
 
-Clarity.prototype.set_player = function (map) {
+Clarity.prototype.set_initial_state = function (map) {
     this.player.loc.x = map.player.x * this.tile_size || 0;
     this.player.loc.y = map.player.y * this.tile_size || 0;
     this.player.image = new Image();
@@ -176,6 +173,9 @@ Clarity.prototype.set_player = function (map) {
         x: 0,
         y: 0,
     };
+    this.current_map.keys[10].solid=1;
+    this.current_map.keys[10].colour="#555";
+
     this.log("Successfully loaded player.");
 
     return true;

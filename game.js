@@ -44,7 +44,7 @@ canvas.height = window.document.body.scrollHeight;
 
 game.set_viewport(canvas.width, canvas.height);
 game.load_map(map);
-game.set_player(map);
+game.set_initial_state(map);
 
 /* Limit the viewport to the confines of the map */
 game.limit_viewport = true;
